@@ -1,0 +1,92 @@
+###############################
+ MKS22 Final Project Proposal 
+###############################
+######### Team REP ############
+####### Elvin Shoyfer #########
+######## Roman Szul ###########
+##### Patrick McConnell #######
+###############################
+
+###### User Experience #######
+
+Upon entering the site, the user should see 
+a registration screen where they will be able
+to register using name, username, and password fields.
+Upon registration, the user will be redirected to a 
+login page where they can login using their newly 
+registered account. A button that takes existing 
+users to the login page will be provided on the homepage.
+Once the user is logged in, they'll be in a session
+that is self-aware of their username. The user will be taken
+to their own profile, complete with a profile picture,
+username, description, wall post field, wall, and settings button.
+By clicking the settings button, they can modify their user profile 
+page for other users to see. Additionally, a search function
+will be provided that allows users to search for others.
+
+###### Concepts Used #######
+
+Multiple concepts from class were utilized 
+for this project, alongside others that were
+not touched upon. Web forms are used to 
+accomplish functions on the site, such as registering,
+logging in, posting on someone's wall, searching,
+and editting your own settings. Combined with the 
+Python cgi module, the Python scripts are able to 
+work with the data inputted by the user; at times
+this would occur in the form of data being passed
+by the user for storage, while in other cases it 
+would allow a Python script to know which duties
+to perform. A text file is used to store the list of usernames on the site,
+which is utilized in both the search function and 
+in registration. Functions that manipulate the string
+datatype were necessary for preparation of certain HTML
+elements on the site. Lists were used for storage in cases
+such as wallpost data for a user and for manipulation
+of usernames stored in the textfile. Multiple HTML
+and CSS techniques were used to create an aesthetically
+pleasing website design; in addition, a touch of JavaScript
+was added to the homepage. The dictionary was used as well, but
+in the context of other modules (see below). The os module 
+was used to access client data (cookies; see below). 
+
+Multiple concepts that were not touched upon in class were
+utilized for this project, as well. First, for secure
+storage of passwords, was the hashlib library. This 
+enabled storage of the password as an MD5 hash, salted prior 
+to hashing, to enable a higher level of user security. 
+The user session was stored using cookies stored on the client-side,
+and the creation and retreival of cookies was accomplished 
+using the Python cookie module. In addition, modification of cookie
+elements such as expiration time had to be used to facilitate 
+functions such as logging out by causing the client's browser
+to mark the cookie for flushing. Manipulation of cookies
+via the cookie module is conducted using a dictionary-like 
+mapping system. A new data structure, objects,
+were utilized to allow for organized storage and manipulation of 
+user data. A User class was created, which upon instantiation
+would contain default values for user data and includes a suite
+for manipulation of that user data as used in settings.py and wall.py. 
+The dictionary-like shelve module was used to store these objects
+persistently, enabling easy storage, retreival, and manipulation (if 
+an object called a method that would modify its varaibles, the 
+change would automatically be stored using Writeback mode). The 
+shelve module dictionary treated usernames as keys with the corresponding 
+User object as the value. 
+
+###### Files Used ######
+Each page as well as each major function/action
+requierd its own python script, with the exception
+of static pages such as the homepage and login page. 
+The python files used were as follows:
+~ register.py: creates a User object and stores it in database; redirects to login.html
+~ login.py: logs the user in, placing a cookie on the client-side; redirects to profile.py
+~ profile.py: Renders user profile page. 
+~ settings.py: Renders settings page, executes data manipulations called for by itself.
+~ wall.py: Edits user wall data, redirects back to profile of user posted on.
+~ search.py: Performs a search of users and renders search page w/ results
+~ logout.py: expires session cookie; redirects to homepage
+~ home.html: Register page; contains HTML, CSS, JavaScript; passes input to register.py
+~ login.html: Login page; contains HTML, CSS, JavaScript; passes input to login.py
+~ users.txt: Userlist stored in plaintext
+~ data.db: Shelve dictionary; keys are users, values are user data objects

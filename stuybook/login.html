@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>stuybook</title>
+	<link rel="stylesheet" type="text/css" href="hpsheet2.css">
+	<link rel="icon" type="image/png" href="favi.png">
+</head>
+<body>
+	<div class="bg">
+		<script>
+			var random = Math.floor(Math.random() * 3);
+			var pics = new Array();
+			pics[0] = 'http://i.imgur.com/U1K0HSD.jpg';
+			pics[1] = 'http://i.imgur.com/rsAyUzE.jpg';
+			pics[2] = 'http://i.imgur.com/XTHspTI.jpg';
+			var randompic = pics[random]
+			var image = '<img src="' + randompic + '">';
+			document.write(image);
+		</script>
+	</div>
+	<div class="logo">
+		<img src="logo_noshad_trans.png">
+	</div>
+	<div class="register">
+	</div>
+	<form method="POST" action="login.py">
+		<div class="inputbox">
+			<input type="text" name="user" placeholder="Username">
+		</div>
+		<div class="inputbox">	
+			<input type="password" name="pass" placeholder="Password">
+		</div>
+		<input class="button" type="submit" name="login" value="login">
+	</form>
+	<span class="message">
+		a shoyfer, mcconnell, and szul ent. collab 
+	</span>
+	<div class="login">
+		<a href="home.html">
+			<div class="button">
+				register
+			</div>
+		</a>
+	</div>
+</body>
+</html>

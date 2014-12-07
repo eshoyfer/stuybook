@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>stuybook</title>
+	<link rel="stylesheet" type="text/css" href="settings.css">
+	<link rel="icon" type="image/png" href="favi.png">
+</head>
+<body>
+	<div class="nav_cont">
+		<div class="nav_items">
+			<ul>
+				<li style="font-family:HelveticaNeue; color:white;">stuybook</li>
+				<li>
+					<form method="POST" action="search.py">
+						<input style="height: 30px; width: 300px;" type="text" name="search" placeholder="Search users...">
+					</form>
+				</li>
+				<li>
+					<form method="POST" action="profile.py">
+						<input class="button" type="submit" name="profile" value="profile">
+					</form>
+				</li>
+				<li>
+					<form method="POST" action="logout.py">
+						<input class="button" type="submit" name="logout" value="logout">
+					</form>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="main_cont">
+		<span style="font-size: 2em">Settings</span><br><hr><br>
+		<strong>Username</strong>: Sample Username <br><hr><br>
+		<strong>Password</strong>: 
+			<form method="POST" action="settings.py">
+				<input type="password" name="passwordinput"> <br><br>
+				<input class="button" type="submit" name="password" value="submit"> <br><br><hr><br>
+			</form>
+		<strong>About me</strong>:<br> 
+			<form method="POST" action="settings.py">
+				<textarea rows="6" name="aboutmeinput" cols="70" placeholder="Edit your about me!"></textarea> <br>
+				<input class="button" type="submit" name="aboutme" value="submit"> <br><br><hr><br> 
+			</form>
+		<strong>Picture url</strong>: 
+			<form method="POST" action="settings.py">
+				<input type="text" name="picurlinput"> <br><br>
+				<input class="button" type="submit" name="picurl" value="submit"> <br><br><hr><br>
+			</form>
+
+	</div>
+</body>
+</html>

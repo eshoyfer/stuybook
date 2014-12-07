@@ -1,0 +1,139 @@
+@font-face { 
+ 	font-family: HelveticaNeue; 
+ 	src: url('HelveticaNeueLTCom-Md.ttf');
+ } 
+
+@font-face { 
+ 	font-family: HelveticaNeueBold; 
+ 	src: url('HelveticaNeueLTCom-Bd.ttf');
+ } 
+
+@font-face { 
+ 	font-family: HelveticaNeueItalic; 
+ 	src: url('HelveticaNeueLTCom-It.ttf');
+ } 
+
+* {  
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+ }
+body {
+	font-family: HelveticaNeue, sans-serif;
+	color: rgb(123, 128, 132);
+	font-size: 1.4em;
+}
+
+.bg {
+	position: fixed; 
+	top: 0; 
+	left: 0;
+	min-width: 100%;
+	min-height: 100%;
+	z-index: -1;
+}
+
+.register {
+	position: fixed;
+	z-index: 0;
+	background-color: rgba(226, 231, 234, 0.8);
+	color: rgb(123, 128, 132);
+	box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.298039);
+	top: 50%;
+	left: 50%;
+	margin-left: -375px;
+	margin-top: -0px;
+	width: 750px;
+	height: 100px;
+	border-radius: 10px;
+	z-index: 0;
+}
+
+.logo {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-left: -12.5%;
+	margin-top: -6.5%;
+	height: auto;
+	width: 25%;
+}
+
+.message {
+	color: #FFF;
+	font-size: 0.8em;
+	position: fixed;
+	top: 95%;
+	left: 95%;
+	margin-top: 20px;
+	margin-left: -275px;
+}
+
+.login {
+	color: #FFF;
+	font-size: 1em;
+	position: fixed;
+	top: 0;
+	left: 99%;
+	margin-top: 20px;
+	margin-left: -220px;
+}
+
+form {
+	position: fixed;
+	display: inline-block;
+	top: 50%;
+	margin-top: 20px;
+	left: 29%;
+}
+
+input[type=text], input[type=password], textarea {
+	@include transition(all 0.30s ease-in-out);
+	display: inline-block;
+	outline: none;
+	padding: 3px 0px 3px 3px;
+	margin: 5px 1px 3px 0px;
+	border: 1px solid #DDDDDD;
+	border-radius: 5px;
+	display: inline-block;
+}
+ 
+input[type=text]:focus, input[type=password]:focus, textarea:focus {
+	@include box-shadow(0 0 5px rgba(81, 203, 238, 1));
+	padding: 3px 0px 3px 3px;
+	margin: 5px 1px 3px 0px;
+	border: 1px solid rgba(81, 203, 238, 1);
+}
+
+.inputbox {
+	margin-left: 100px;
+	margin-top: 10px;
+	height: 20px;
+	width: 8.5%;
+	float: left;
+}
+
+.button {
+	position: relative;
+	margin-left: 100px;
+	margin-top: 13px;
+	font-family: HelveticaNeue;
+	font-size: 1em;
+	background-color: rgb(91, 182, 91);
+	text-align: center;
+	padding-top: -50px;
+	color: rgb(255, 255, 255);
+	box-shadow: rgba(255, 255, 255, 0.2) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.0470588) 0px 1px 2px 0px;
+	height: 30px;
+	width: 100px;
+	border-radius: 5px;
+	-webkit-box-shadow: rgba(255, 255, 255, 0.2) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.0470588) 0px 1px 2px 0px;
+	background-image: linear-gradient(rgb(98, 196, 98), rgb(81, 163, 81));
+}
+
+a {
+	text-decoration: none;
+}

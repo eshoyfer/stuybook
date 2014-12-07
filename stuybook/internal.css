@@ -1,0 +1,150 @@
+@font-face { 
+ 	font-family: HelveticaNeue; 
+ 	src: url('HelveticaNeueLTCom-Md.ttf');
+ } 
+
+@font-face { 
+ 	font-family: HelveticaNeueBold; 
+ 	src: url('HelveticaNeueLTCom-Bd.ttf');
+ } 
+
+@font-face { 
+ 	font-family: HelveticaNeueItalic; 
+ 	src: url('HelveticaNeueLTCom-It.ttf');
+ } 
+
+* {  
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    z-index: 0;
+ }
+
+ body {
+ 	font-family: HelveticaNeue, sans-serif;
+ 	background-color: #1A1A1A;
+ 	color: #DDE1E3;
+ 	font-size: 1em;
+ }
+
+ .nav_cont {
+ 	background-color: #4BF;
+ 	height: 50px;
+ 	top: 0;
+ 	padding-top: 5px;
+ }
+
+
+ .nav_items {
+ 	position: fixed;
+ 	left: 25%;
+ 	font-size: 2em;
+ }
+
+ .nav_cont li {
+ 	text-decoration: none;
+ 	display: inline;
+ 	list-style: none;
+ 	float: left;
+ 	margin-left: 70px;
+ }
+
+input[type=text], input[type=password], textarea {
+	@include transition(all 0.30s ease-in-out);
+	display: inline-block;
+	outline: none;
+	padding: 3px 0px 3px 3px;
+	margin: 5px 1px 3px 0px;
+	border: 1px solid #DDDDDD;
+	border-radius: 5px;
+	display: inline-block;
+}
+ 
+input[type=text]:focus, input[type=password]:focus, textarea:focus {
+	@include box-shadow(0 0 5px rgba(191,232,168,1));
+	padding: 3px 0px 3px 3px;
+	margin: 5px 1px 3px 0px;
+	border: 1px solid rgba(191,232,168,1);
+}
+
+.button {
+	position: relative;
+	font-family: HelveticaNeue;
+	font-size: 1em;
+	background-color: rgb(91, 182, 91);
+	text-align: center;
+	color: rgb(255, 255, 255);
+	box-shadow: rgba(255, 255, 255, 0.2) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.0470588) 0px 1px 2px 0px;
+	height: 40px;
+	width: 120px;
+	border-radius: 5px;
+	-webkit-box-shadow: rgba(255, 255, 255, 0.2) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.0470588) 0px 1px 2px 0px;
+	background-image: linear-gradient(rgb(98, 196, 98), rgb(81, 163, 81));
+}
+
+.main_cont {
+	position: absolute;
+	width: 50%;
+	left: 25%;
+	top: 70px;
+	color: black;
+}
+
+.pic_wrapper {
+	position: fixed;
+	display: block;
+	background-color: #FFF;
+	height: 750px;
+	width: 300px;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+img {
+	height: 250px;
+	width: 300px;
+}
+
+.name {
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.message {
+	font-size: 1.2em;
+	color: gray;
+}
+
+.wall_cont {
+	position: relative;
+	display: block;
+	width: 600px;
+	height: 750px;
+	float: right;
+}
+
+.wall_post, .wall {
+	background-color: white;
+	height: 150px;
+	width: auto;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.wall_post .button {
+	width: 100%;
+}
+
+.wall {
+	font-size: 1.2em;
+	margin-top: 20px;
+	height: 560px;
+}
+
+hr {
+	display: block;
+	color: #4BF;
+	background-color: #4BF;
+	height: 2px;
+	width: 100%;
+}

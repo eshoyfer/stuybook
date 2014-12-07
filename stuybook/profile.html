@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>stuybook</title>
+	<link rel="stylesheet" type="text/css" href="profile.css">
+	<link rel="icon" type="image/png" href="favi.png">
+</head>
+<body>
+	<div class="nav_cont">
+		<div class="nav_items">
+			<ul>
+				<li style="font-family:HelveticaNeue; color:white;">stuybook</li>
+				<li>
+					<form method="POST" action="search.py">
+						<input style="height: 30px; width: 300px;" type="text" name="search" placeholder="Search users...">
+					</form>
+				</li>
+				<li>
+					<form method="POST" action="profile.py">
+						<input class="button" type="submit" name="profile" value="profile">
+					</form>
+				</li>
+				<li>
+					<form method="POST" action="logout.py">
+						<input class="button" type="submit" name="logout" value="logout">
+					</form>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="main_cont">
+		<div class="pic_wrapper">
+			<img src="http://dribbble.s3.amazonaws.com/users/102849/screenshots/1106769/photo_keeper_1x.jpg">
+			<div class="name">
+				Sample Name
+			</div>
+			<div class="message">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis erat porttitor ipsum ultricies porta. Morbi consequat felis id tellus elementum laoreet. Sed ac vulputate mauris. Phasellus non dui ac elit consectetur rhoncus.
+			</div>
+			<form class="settings" method="POST" action="settings.py">
+				<input class="button" type="submit" name="settings" value="settings">
+			</form>
+
+		</div>
+		<div class="wall_cont">
+			<div class="wall_post">
+				<form method="POST" action="wall.py">	
+					<textarea rows="6" name="wallpost" cols="70" placeholder="Post on their wall!"></textarea>
+					<input type="hidden" name="acteduser" value="acteduser">
+					<input class="button" type="submit" name="submit" value="submit">
+				</form>
+			</div>
+			<div class="wall">
+				Sample User: Sample Content<br><hr><br>
+				Sample User: Sample Content<br><hr><br>
+				Sample User: Sample Content<br><hr><br>
+				Sample User: Sample Content<br><hr><br>
+				Sample User: Sample Content<br><hr><br>
+				Sample User: Sample Content<br><hr><br>
+				Sample User: Sample Content<br><hr><br>
+				Sample User: Sample Content<br><hr><br>
+				Sample User: Sample Content<br><hr><br>
+				Sample User: Sample Content<br><hr><br>
+				Sample User: Sample Content<br><hr><br>
+				Sample User: Sample Content<br><hr><br>
+				Sample User: Sample Content<br><hr><br>
+				Sample User: Sample Content<br><hr><br>
+				Sample User: Sample Content<br><hr><br>
+				Sample User: Sample Content<br><hr><br>
+				Sample User: Sample Content<br><hr><br>
+				Sample User: Sample Content<br><hr><br>
+				Sample User: Sample Content<br><hr><br>
+				Sample User: Sample Content<br><hr><br>
+				Sample User: Sample Content<br><hr><br>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>
